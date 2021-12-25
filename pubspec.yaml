@@ -1,0 +1,38 @@
+name: invoice_bill
+description: An ordinary bill layout designed using flutter.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  qr_flutter: ^4.0.0
+  intl: ^0.17.0
+  flutter_rating_bar: ^4.0.0
+  url_launcher: ^6.0.10
+  http: ^0.13.3
+  google_fonts: ^2.1.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+   - images/email.png
+   - images/phone.png
+   - images/sbox_login.png
+   - images/whstp.png
+
