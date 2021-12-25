@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
 import 'package:invoice_bill/constants/app_theme.dart';
 import 'package:invoice_bill/form/user_form.dart';
 import 'package:invoice_bill/form/ux_form.dart';
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: myLightTheme.copyWith(
         scrollbarTheme: const ScrollbarThemeData().copyWith(
           thumbColor: MaterialStateProperty.all(
-            const Color(0xffff3838),
+            const Color(0xff2C061F),
           ),
         ),
       ),
@@ -47,14 +46,6 @@ class _OpenBillState extends State<OpenBill> {
   @override
   void initState() {
     super.initState();
-    // getBill(billId).then((bill) {
-    //   setState(() {
-    //     this.bill = bill;
-    //     billDate = DateTime.parse(bill['created_at'].toString());
-    //     debugPrint('BILL ID ======> $billId');
-    //     debugPrint('BILL DATE ======> $billDate');
-    //   });
-    // });
   }
 
   @override
@@ -63,6 +54,7 @@ class _OpenBillState extends State<OpenBill> {
     debugPrint(MediaQuery.of(context).size.width.toString());
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: GestureDetector(
           onTap: () {
             FocusScopeNode currentFocus = FocusScope.of(context);
@@ -79,16 +71,17 @@ class _OpenBillState extends State<OpenBill> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          QrImage(
-                            data: '',
-                            version: QrVersions.auto,
-                            size: 100,
-                            gapless: true,
-                          ),
-                          if (MediaQuery.of(context).size.width >= 500)
+                      if (MediaQuery.of(context).size.width >= 500)
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            QrImage(
+                              foregroundColor: Color(0xff2C061F),
+                              data: '',
+                              version: QrVersions.auto,
+                              size: 100,
+                              gapless: true,
+                            ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 10.0),
                               child: Column(
@@ -107,15 +100,25 @@ class _OpenBillState extends State<OpenBill> {
                                 ],
                               ),
                             ),
-                        ],
-                      ),
+                          ],
+                        ),
                       SizedBox(
-                        height: (!global.isSmallDevice(context)) ? 10 : 25,
+                        height: (!global.isSmallDevice(context)) ? 0 : 10,
                       ),
                       if (MediaQuery.of(context).size.width < 500)
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            QrImage(
+                              foregroundColor: Color(0xff2C061F),
+                              data: '',
+                              version: QrVersions.auto,
+                              size: 100,
+                              gapless: true,
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
                             Text(
                               '#' + '61bad9a2bf8d040c65abc7c6',
                               style: secondaryTextStyle,
@@ -139,7 +142,7 @@ class _OpenBillState extends State<OpenBill> {
                           height: (!global.isSmallDevice(context)) ? 10 : 25,
                         ),
                       Image.asset(
-                        'images/sbox_login.png',
+                        'images/store.png',
                         height: (global.isSmallDevice(context)) ? 60 : 80,
                         alignment: Alignment.center,
                       ),
@@ -200,7 +203,7 @@ class _OpenBillState extends State<OpenBill> {
                         padding: EdgeInsets.only(left: 10.0, right: 10.0),
                         child: Divider(
                           thickness: 1.0,
-                          color: Color(0xffff3838),
+                          color: Color(0xff2C061F),
                         ),
                       ),
                       Padding(
@@ -311,9 +314,9 @@ class _OpenBillState extends State<OpenBill> {
                             Card(
                               child: ExpansionTile(
                                 collapsedBackgroundColor:
-                                    const Color(0xffff3838),
+                                    const Color(0xff2C061F),
                                 iconColor: (_customTileExpanded == false)
-                                    ? const Color(0xffff3838)
+                                    ? const Color(0xff2C061F)
                                     : Colors.white,
                                 title: Text(
                                   'View Exciting Offers',
@@ -355,9 +358,9 @@ class _OpenBillState extends State<OpenBill> {
                                 },
                               ),
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            // const SizedBox(
+                            //   height: 20,
+                            // ),
                             // Container(
                             //   width: MediaQuery.of(context).size.width,
                             //   margin: const EdgeInsets.symmetric(
@@ -420,9 +423,9 @@ class _OpenBillState extends State<OpenBill> {
                             //     ),
                             //   ),
                             // ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            // const SizedBox(
+                            //   height: 20,
+                            // ),
                             const SizedBox(
                               height: 20,
                             ),
@@ -454,7 +457,7 @@ class _OpenBillState extends State<OpenBill> {
                                       style: primaryTextStyle,
                                     ),
                                     const Divider(
-                                      color: Color(0xffff3838),
+                                      color: Color(0xff2C061F),
                                     ),
                                     const SizedBox(height: 20),
                                     Row(
@@ -567,7 +570,7 @@ class _OpenBillState extends State<OpenBill> {
                                 gradient: LinearGradient(
                                   stops: [0.006, 0.006],
                                   colors: [
-                                    Color(0xffff3838),
+                                    Color(0xff2C061F),
                                     Colors.white,
                                   ],
                                 ),
@@ -601,7 +604,7 @@ class _OpenBillState extends State<OpenBill> {
                                 Text(
                                   'Email : ',
                                   style: primaryTextStyle.copyWith(
-                                    color: const Color(0xffff3838),
+                                    color: const Color(0xff2C061F),
                                   ),
                                 ),
                                 Text(
@@ -621,7 +624,7 @@ class _OpenBillState extends State<OpenBill> {
                                 Text(
                                   'Phone : ',
                                   style: primaryTextStyle.copyWith(
-                                    color: const Color(0xffff3838),
+                                    color: const Color(0xff2C061F),
                                   ),
                                 ),
                                 Text(

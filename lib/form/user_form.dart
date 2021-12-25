@@ -42,7 +42,7 @@ class _UserFormState extends State<UserForm> {
               ),
               const Divider(
                 
-                color: Color(0xffff3838),
+                color: Color(0xff2C061F),
               ),
               const SizedBox(
                 height: 10,

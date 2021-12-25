@@ -35,7 +35,7 @@ class _UserRatingState extends State<UserRating> {
               style: primaryTextStyle,
             ),
             const Divider(
-              color: Color(0xffff3838),
+              color: Color(0xff2C061F),
             ),
             const SizedBox(height: 10),
             Padding(
@@ -56,7 +56,7 @@ class _UserRatingState extends State<UserRating> {
               itemBuilder: (context, _) => const Icon(
                 Icons.star,
                 size: 1,
-                color: Color(0xffff3838),
+                color: Color(0xff2C061F),
               ),
               onRatingUpdate: (rating) {
                 debugPrint(rating.toString());
@@ -81,7 +81,7 @@ class _UserRatingState extends State<UserRating> {
               itemBuilder: (context, _) => const Icon(
                 Icons.star,
                 size: 1,
-                color: Color(0xffff3838),
+                color: Color(0xff2C061F),
               ),
               onRatingUpdate: (rating) {
                 debugPrint(rating.toString());
@@ -106,7 +106,7 @@ class _UserRatingState extends State<UserRating> {
               itemBuilder: (context, _) => const Icon(
                 Icons.star,
                 size: 1,
-                color: Color(0xffff3838),
+                color: Color(0xff2C061F),
               ),
               onRatingUpdate: (rating) {
                 debugPrint(rating.toString());
@@ -131,7 +131,7 @@ class _UserRatingState extends State<UserRating> {
               itemBuilder: (context, _) => const Icon(
                 Icons.star,
                 size: 1,
-                color: Color(0xffff3838),
+                color: Color(0xff2C061F),
               ),
               onRatingUpdate: (rating) {
                 debugPrint(rating.toString());
@@ -192,7 +192,7 @@ class _UserRatingState extends State<UserRating> {
         gradient: LinearGradient(
           stops: [0.006, 0.006],
           colors: [
-            Color(0xffff3838),
+            Color(0xff2C061F),
             Colors.white,
           ],
         ),

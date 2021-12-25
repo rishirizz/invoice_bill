@@ -33,6 +33,6 @@ flutter:
   assets:
    - images/email.png
    - images/phone.png
-   - images/sbox_login.png
+   - images/store.png
    - images/whstp.png
 
