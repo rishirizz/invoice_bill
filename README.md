@@ -1,7 +1,6 @@
 # invoice_bill
 
-A new Flutter projec
-
+An invoice billing example that can be used typically on any billing and POS applications. This project has been made entirely using Flutter, Google's UI toolkit.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
