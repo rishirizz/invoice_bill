@@ -142,7 +142,7 @@ class _OpenBillState extends State<OpenBill> {
                           height: (!global.isSmallDevice(context)) ? 10 : 25,
                         ),
                       Image.asset(
-                        'images/store.png',
+                        'images/alt_logo.jpg',
                         height: (global.isSmallDevice(context)) ? 60 : 80,
                         alignment: Alignment.center,
                       ),
@@ -662,13 +662,22 @@ class _OpenBillState extends State<OpenBill> {
                       children: [
                         Text(
                           'Powered by ',
-                          style: headerTextStyle.copyWith(fontSize: 20),
+                          style: primaryTextStyle.copyWith(fontSize: 20),
+                        ),
+                        SizedBox(
+                          width: 4,
                         ),
                         InkWell(
                           onTap: _launchSboxPlayStore,
-                          child: Image.asset(
-                            'images/sbox_login.png',
-                            height: 30,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 3.0),
+                            child: Text(
+                              'YOUR IDEAS',
+                              style: headerTextStyle.copyWith(
+                                fontSize: 22,
+                                color: Color(0xff2C061F),
+                              ),
+                            ),
                           ),
                         ),
                       ],
